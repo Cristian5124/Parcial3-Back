@@ -141,7 +141,184 @@ C:.
 ```
 7. Creo las clases que contienen la funcionalidad del proyecto
 
-8. Creo la base de datos en MongoDB Atlas, he creado un registro en la base de datos:
+Cita.java:
+
+```java
+package com.ecisaludvital.gestion_citas_medicas.models;
+
+import java.util.Date;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "citas")
+public class Cita {
+
+    @Id
+    private String id;
+    private String idecisaludvital;
+    private String usuario;
+    private Date fecha;
+    private String horaInicio;
+    private String horaFin;
+    private String especialidad;
+    private String estado;
+
+    public Cita() {
+    }
+
+    public Cita(String idecisaludvital, String usuario, Date fecha, String horaInicio, String horaFin, String especialidad, String estado) {
+        this.idecisaludvital = idecisaludvital;
+        this.usuario = usuario;
+        this.fecha = fecha;
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+        this.especialidad = especialidad;
+        this.estado = estado;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getIdecisaludvital() {
+        return idecisaludvital;
+    }
+
+    public void setIdecisaludvital(String idecisaludvital) {
+        this.idecisaludvital = idecisaludvital;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    public String getHoraFin() {
+        return horaFin;
+    }
+
+    public void setHoraFin(String horaFin) {
+        this.horaFin = horaFin;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+}
+
+```
+
+ecisaludvital.java:
+
+```
+package com.ecisaludvital.gestion_citas_medicas.models;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "ecisaludvitals")
+public class ecisaludvital {
+
+    @Id
+    private String id;
+    private String nombre;
+    private int capacidad;
+    private String ubicacion;
+    private boolean estado;
+
+    public ecisaludvital() {
+    }
+
+    public ecisaludvital(String nombre, int capacidad, String ubicacion, boolean estado) {
+        this.nombre = nombre;
+        this.capacidad = capacidad;
+        this.ubicacion = ubicacion;
+        this.estado = estado;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+}
+
+```
+
+También he creado los controllers, tests, repositorios, modelos, pero esos no los pongo aquí porque me demoro mucho.
+
+
+9. Creo la base de datos en MongoDB Atlas, he creado un registro en la base de datos:
 
    ![image](https://github.com/user-attachments/assets/183aab60-09e7-49b7-ab63-68d3a0ea6a53)
 
