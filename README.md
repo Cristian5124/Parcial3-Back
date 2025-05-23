@@ -323,4 +323,7 @@ También he creado los controllers, tests, repositorios, modelos, pero esos no l
    ![image](https://github.com/user-attachments/assets/183aab60-09e7-49b7-ab63-68d3a0ea6a53)
 
 
-10. Las pruebas Unitarias
+10. Despliegue en Azure:
+
+![image](https://github.com/user-attachments/assets/7b8ceae9-ba3c-4d3f-9718-2da1ef945644)
+
