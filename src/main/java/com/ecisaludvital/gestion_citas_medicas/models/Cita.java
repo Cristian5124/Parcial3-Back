@@ -1,8 +1,9 @@
 package com.ecisaludvital.gestion_citas_medicas.models;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import java.util.Date;
 
 @Document(collection = "citas")
 public class Cita {
@@ -14,19 +15,19 @@ public class Cita {
     private Date fecha;
     private String horaInicio;
     private String horaFin;
-    private String proposito;
+    private String especialidad;
     private String estado;
 
     public Cita() {
     }
 
-    public Cita(String idecisaludvital, String usuario, Date fecha, String horaInicio, String horaFin, String proposito, String estado) {
+    public Cita(String idecisaludvital, String usuario, Date fecha, String horaInicio, String horaFin, String especialidad, String estado) {
         this.idecisaludvital = idecisaludvital;
         this.usuario = usuario;
         this.fecha = fecha;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
-        this.proposito = proposito;
+        this.especialidad = especialidad;
         this.estado = estado;
     }
 
@@ -78,12 +79,12 @@ public class Cita {
         this.horaFin = horaFin;
     }
 
-    public String getProposito() {
-        return proposito;
+    public String getEspecialidad() {
+        return especialidad;
     }
 
-    public void setProposito(String proposito) {
-        this.proposito = proposito;
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
     }
 
     public String getEstado() {

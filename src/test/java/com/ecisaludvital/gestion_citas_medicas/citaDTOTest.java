@@ -15,12 +15,12 @@ class citaDTOTest {
     Date fecha = new Date();
     citaDTO reserva = new citaDTO.Builder()
       .id("1")
-      .idcita("lab1")
+      .idcita("ps01")
       .usuario("usuario1")
       .fecha(fecha)
       .horaInicio("08:00")
       .horaFin("10:00")
-      .proposito("Estudio")
+      .especialidad("psicología")
       .estado("Confirmada")
       .build();
 
@@ -31,7 +31,7 @@ class citaDTOTest {
     assertEquals(fecha, reserva.getFecha());
     assertEquals("08:00", reserva.getHoraInicio());
     assertEquals("10:00", reserva.getHoraFin());
-    assertEquals("Estudio", reserva.getProposito());
+    assertEquals("Estudio", reserva.getEspecialidad());
     assertEquals("Confirmada", reserva.getEstado());
   }
 }

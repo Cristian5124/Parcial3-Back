@@ -31,7 +31,7 @@ public class citaController {
     cita.setFecha(citaDTO.getFecha());
     cita.setHoraInicio(citaDTO.getHoraInicio());
     cita.setHoraFin(citaDTO.getHoraFin());
-    cita.setProposito(citaDTO.getProposito());
+    cita.setEspecialidad(citaDTO.getEspecialidad());
     cita.setEstado(citaDTO.getEstado());
 
     return citaService.crearCita(cita);

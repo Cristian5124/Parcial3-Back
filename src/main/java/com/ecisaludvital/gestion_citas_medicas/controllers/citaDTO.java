@@ -10,7 +10,7 @@ public class citaDTO {
   private Date fecha;
   private String horaInicio;
   private String horaFin;
-  private String proposito;
+  private String especialidad;
   private String estado;
 
   public citaDTO() {}
@@ -22,7 +22,7 @@ public class citaDTO {
     this.fecha = builder.fecha;
     this.horaInicio = builder.horaInicio;
     this.horaFin = builder.horaFin;
-    this.proposito = builder.proposito;
+    this.especialidad = builder.especialidad;
     this.estado = builder.estado;
   }
 
@@ -34,7 +34,7 @@ public class citaDTO {
     private Date fecha;
     private String horaInicio;
     private String horaFin;
-    private String proposito;
+    private String especialidad;
     private String estado;
 
     public Builder id(String id) {
@@ -67,8 +67,8 @@ public class citaDTO {
       return this;
     }
 
-    public Builder proposito(String proposito) {
-      this.proposito = proposito;
+    public Builder especialidad(String especialidad) {
+      this.especialidad = especialidad;
       return this;
     }
 
@@ -106,8 +106,8 @@ public class citaDTO {
     return horaFin;
   }
 
-  public String getProposito() {
-    return proposito;
+  public String getEspecialidad() {
+    return especialidad;
   }
 
   public String getEstado() {
