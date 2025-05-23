@@ -19,7 +19,126 @@ Agregamos la propiedad:
 ![image](https://github.com/user-attachments/assets/0ba20c71-b331-4a00-9e04-dbee97150479)
 5. Dar `mvn package`
 ![image](https://github.com/user-attachments/assets/64ae439e-2144-4382-9d8a-821383b40682)
-6. Posterior a esto, creamos los directorios en donde se alojaran las clases Java de nuestro proyecto.
+6. Posterior a esto, creamos los directorios en donde se alojaran las clases Java de nuestro proyecto:
+```
+C:.
+│   .gitignore
+│   HELP.md
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│   README.md
+│   
+├───.github
+│   └───workflows
+│           main.yml
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───ecisaludvital
+│   │   │           └───gestion_citas_medicas
+│   │   │               │   ecisaludvitalReservasApplication.java
+│   │   │               │   ServletInitializer.java
+│   │   │               │
+│   │   │               ├───config
+│   │   │               │       SecurityConfig.java
+│   │   │               │
+│   │   │               ├───controllers
+│   │   │               │       citaController.java
+│   │   │               │       citaDTO.java
+│   │   │               │       ecisaludvitalController.java
+│   │   │               │
+│   │   │               ├───models
+│   │   │               │       Cita.java
+│   │   │               │       ecisaludvital.java
+│   │   │               │
+│   │   │               ├───repositories
+│   │   │               │       CitaRepository.java
+│   │   │               │       ecisaludvitalRepository.java
+│   │   │               │
+│   │   │               └───services
+│   │   │                       CitaService.java
+│   │   │                       ecisaludvitalService.java
+│   │   │
+│   │   └───resources
+│   │       │   application-dev.properties
+│   │       │   application-prod.properties
+│   │       │   application.properties
+│   │       │
+│   │       └───META-INF
+│   │               additional-spring-configuration-metadata.json
+│   │
+│   └───test
+│       └───java
+│           └───com
+│               └───ecisaludvital
+│                   └───gestion_citas_medicas
+│                           citaControllerTest.java
+│                           citaDTOTest.java
+│                           CitaServiceTest.java
+│
+└───target
+    ├───classes
+    │   │   application-dev.properties
+    │   │   application-prod.properties
+    │   │   application.properties
+    │   │
+    │   ├───com
+    │   │   └───ecisaludvital
+    │   │       └───gestion_citas_medicas
+    │   │           │   ecisaludvitalReservasApplication.class
+    │   │           │   ServletInitializer.class
+    │   │           │
+    │   │           ├───config
+    │   │           │       SecurityConfig.class
+    │   │           │
+    │   │           ├───controllers
+    │   │           │       citaController.class
+    │   │           │       citaDTO$Builder.class
+    │   │           │       citaDTO.class
+    │   │           │       ecisaludvitalController.class
+    │   │           │
+    │   │           ├───models
+    │   │           │       Cita.class
+    │   │           │       ecisaludvital.class
+    │   │           │
+    │   │           ├───repositories
+    │   │           │       CitaRepository.class
+    │   │           │       ecisaludvitalRepository.class
+    │   │           │
+    │   │           └───services
+    │   │                   CitaService.class
+    │   │                   ecisaludvitalService.class
+    │   │
+    │   └───META-INF
+    │           additional-spring-configuration-metadata.json
+    │
+    ├───generated-sources
+    │   └───annotations
+    ├───generated-test-sources
+    │   └───test-annotations
+    ├───maven-status
+    │   └───maven-compiler-plugin
+    │       ├───compile
+    │       │   └───default-compile
+    │       │           createdFiles.lst
+    │       │           inputFiles.lst
+    │       │
+    │       └───testCompile
+    │           └───default-testCompile
+    │                   createdFiles.lst
+    │                   inputFiles.lst
+    │
+    └───test-classes
+        └───com
+            └───ecisaludvital
+                └───gestion_citas_medicas
+                        citaDTOTest.class
+                        CitaServiceTest.class
+                        ecisaludvitalControllerTest.class
+```
 7. Creo las clases que contienen la funcionalidad del proyecto
 
 8. Configuración de Spring Boot
