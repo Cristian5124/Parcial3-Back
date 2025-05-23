@@ -141,6 +141,9 @@ C:.
 ```
 7. Creo las clases que contienen la funcionalidad del proyecto
 
-8. Configuración de Spring Boot
+8. Creo la base de datos en MongoDB Atlas, he creado un registro en la base de datos:
 
-9. Las pruebas Unitarias
+   ![image](https://github.com/user-attachments/assets/183aab60-09e7-49b7-ab63-68d3a0ea6a53)
+
+
+10. Las pruebas Unitarias
